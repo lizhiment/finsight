@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinSight 财报智能分析平台</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="app">
+  <!-- ============ 顶栏 ============ -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">FS</div>
+      <div class="brand-text">
+        <div class="brand-name">FinSight</div>
+        <div class="brand-sub">财报智能分析平台</div>
+      </div>
+    </div>
+    <div class="topbar-center">
+      <div class="search-box">
+        <input type="text" id="globalSearch" placeholder="搜索公司 / 股票代码 / 指标 / 事实…">
+        <button id="globalSearchBtn" class="btn-ghost">检索</button>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="env-badge">本地工作台</span>
+      <span class="env-badge gold">KupasEval A级</span>
+      <div class="avatar">梁</div>
+    </div>
+  </header>
+
+  <!-- ============ 左侧导航 ============ -->
+  <aside class="sidebar">
+    <nav class="side-nav">
+      <div class="nav-section">工作台</div>
+      <button class="nav-item active" data-view="overview"><span class="nav-ico">◈</span>总览工作台</button>
+      <button class="nav-item" data-view="search"><span class="nav-ico">⌕</span>搜索下载</button>
+      <button class="nav-item" data-view="parse"><span class="nav-ico">⇅</span>解析复核</button>
+      <button class="nav-item" data-view="extract"><span class="nav-ico">▤</span>财务抽取与入库</button>
+
+      <div class="nav-section">智能体</div>
+      <button class="nav-item" data-view="agents"><span class="nav-ico">✦</span>多智能体协同</button>
+      <button class="nav-item" data-view="report"><span class="nav-ico">▣</span>报告工作台</button>
+
+      <div class="nav-section">知识资产</div>
+      <button class="nav-item" data-view="wiki"><span class="nav-ico">☰</span>LLM-Wiki</button>
+      <button class="nav-item" data-view="evidence"><span class="nav-ico">⚑</span>证据链中心</button>
+
+      <div class="nav-section">评测</div>
+      <button class="nav-item" data-view="eval"><span class="nav-ico">◎</span>KupasEval 评测</button>
+    </aside>
+
+  <!-- ============ 主工作区 ============ -->
+  <main class="main">
+    <!-- 各视图容器 -->
+    <section id="view-overview" class="view active"></section>
+    <section id="view-search" class="view"></section>
+    <section id="view-parse" class="view"></section>
+    <section id="view-extract" class="view"></section>
+    <section id="view-agents" class="view"></section>
+    <section id="view-report" class="view"></section>
+    <section id="view-wiki" class="view"></section>
+    <section id="view-evidence" class="view"></section>
+    <section id="view-eval" class="view"></section>
+  </main>
+</div>
+
+<div id="toast-root"></div>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
